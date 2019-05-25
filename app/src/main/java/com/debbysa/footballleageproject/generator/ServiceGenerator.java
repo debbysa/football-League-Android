@@ -1,8 +1,13 @@
-package com.debbysa.footballleageproject.services;
+package com.debbysa.footballleageproject.generator;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ServiceGenerator {
     public static final String BASE_URL = "https://api.football-data.org";

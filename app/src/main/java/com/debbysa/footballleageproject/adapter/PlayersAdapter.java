@@ -28,7 +28,7 @@ public class PlayersAdapter extends RecyclerView.Adapter<PlayersAdapter.PlayersV
         listener = clickListener;
 
         if (list == null) {
-            Log.d(LOG_TAG, "Where art thy data?");
+            Log.d(LOG_TAG, "Dimana datamu?");
         }
     }
 

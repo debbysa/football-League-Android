@@ -32,7 +32,7 @@ public class TeamsAdapter extends RecyclerView.Adapter<TeamsAdapter.TeamsViewHol
         act = activity;
 
         if (list == null || list.size() == 0) {
-            Log.d(LOG_TAG, "Where art thy data?");
+            Log.d(LOG_TAG, "Dimana Datamu");
         }
     }
 

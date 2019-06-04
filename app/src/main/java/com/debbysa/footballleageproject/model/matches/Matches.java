@@ -6,8 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Matches {
-    // for today's matchList (matches) list
-    // https://api.football-data.org/v2/matchList
 
     @SerializedName("count")
     @Expose

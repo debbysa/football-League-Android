@@ -7,8 +7,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Standings {
-    // competition/standings
-    // https://api.football-data.org/v2/competitions/{id}/standings
 
     @SerializedName("competition")
     @Expose

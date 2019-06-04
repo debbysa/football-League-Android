@@ -71,7 +71,7 @@ public class TeamsFragment extends Fragment implements ListItemClickListener {
                 final Teams res = response.body();
 
                 if (res != null) {
-                    Log.d(LOG_TAG, "Data received from " + response.body().toString());
+                    Log.d(LOG_TAG, "data diterima dari " + response.body().toString());
 
                     teamList = new ArrayList<>(res.getTeamList());
                     Log.d(LOG_TAG, "matchList:" + teamList.size());
@@ -79,14 +79,14 @@ public class TeamsFragment extends Fragment implements ListItemClickListener {
                     TeamsAdapter adapter = new TeamsAdapter(TeamsFragment.this.getActivity(), teamList, TeamsFragment.this);
                     list.setAdapter(adapter);
                 } else {
-                    Log.w(LOG_TAG, "RESPONSE IS NULL!");
+                    Log.w(LOG_TAG, "TIDAK ADA RESPONSE");
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<Teams> call, @NonNull Throwable t) {
                 try {
-                    Log.e(LOG_TAG, "QUERY FAILED: " + t.toString() + " >>> CAUSED BY: " + t.getCause());
+                    Log.e(LOG_TAG, "QUERY FAILED: " + t.toString() + " >>> KARENA: " + t.getCause());
                     throw t;
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
@@ -99,7 +99,7 @@ public class TeamsFragment extends Fragment implements ListItemClickListener {
 
     @Override
     public void onListItemClick(int clickedItemIndex, int clickedItemId, String clickedItemName) {
-        String msg = "Item #" + clickedItemIndex + " [" + clickedItemName + "] with id of " + clickedItemId + " clicked.";
+        String msg = "Team diklik!";
         Log.d(LOG_TAG, msg);
         Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG).show();
 

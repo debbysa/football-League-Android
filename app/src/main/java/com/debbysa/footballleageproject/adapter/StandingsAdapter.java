@@ -32,7 +32,7 @@ public class StandingsAdapter extends RecyclerView.Adapter<StandingsAdapter.Stan
         act = activity;
 
         if (list == null) {
-            Log.d(LOG_TAG, "Where art thy data?");
+            Log.d(LOG_TAG, "Dimana datamu");
         }
     }
 

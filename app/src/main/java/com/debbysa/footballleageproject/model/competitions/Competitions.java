@@ -6,8 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Competitions {
-    // competitions list
-    // https://api.football-data.org/v2/competitions
 
     @SerializedName("count")
     @Expose

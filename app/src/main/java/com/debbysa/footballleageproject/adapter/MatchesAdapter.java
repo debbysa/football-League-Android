@@ -26,7 +26,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.Fixtures
         listener = clickListener;
 
         if (list == null || list.size() == 0) {
-            Log.d(LOG_TAG, "Where art thy data?");
+            Log.d(LOG_TAG, "Dimana Datamu");
         }
     }
 
@@ -56,22 +56,18 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.Fixtures
 
         TextView textMatchStatus;
         TextView textMatchTime;
-        TextView textMatchDay;
         TextView textHomeTeam;
         TextView textAwayTeam;
-        TextView textHomeWins;
-        TextView textAwayWins;
 
         FixturesViewHolder(View view) {
             super(view);
 
             textMatchStatus = view.findViewById(R.id.text_match_status);
             textMatchTime = view.findViewById(R.id.text_match_time);
-//            textMatchDay = view.findViewById(R.id.text_match_day);
+
             textHomeTeam = view.findViewById(R.id.text_home_team);
             textAwayTeam = view.findViewById(R.id.text_away_team);
-//            textHomeWins = view.findViewById(R.id.text_home_wins);
-//            textAwayWins = view.findViewById(R.id.text_away_wins);
+
 
             view.setTag(this);
             view.setOnClickListener(this);
@@ -84,24 +80,7 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.Fixtures
             String matchAwayTeam = list.get(i).getMatchAwayTeam().getAwayTeamName();
 
             try {
-                String matchDay = String.format("MD: %d", list.get(i).getMatchDay());
-                String matchHomeWins = String.valueOf(list.get(i).getMatchScore().getFullTime().getHomeTeamWin());
-                String matchAwayWins = String.valueOf(list.get(i).getMatchScore().getFullTime().getAwayTeamWin());
-
-                if (matchDay == null || Objects.equals(matchDay, "null")) {
-                    matchDay = "-";
-                }
-                textMatchDay.setText(matchDay);
-
-                if (matchHomeWins == null || Objects.equals(matchHomeWins, "null")) {
-                    matchHomeWins = "-";
-                }
-                textHomeWins.setText(matchHomeWins);
-
-                if (matchAwayWins == null || Objects.equals(matchAwayWins, "null")) {
-                    matchAwayWins = "-";
-                }
-                textAwayWins.setText(matchAwayWins);
+//
             } catch (NullPointerException e) {
                 e.printStackTrace();
             }

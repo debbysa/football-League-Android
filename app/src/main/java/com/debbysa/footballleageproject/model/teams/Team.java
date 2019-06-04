@@ -6,9 +6,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Team {
-    // competition/teams (teams)
-    // https://api.football-data.org/v2/teams/{id}
-
     @SerializedName("id")
     @Expose
     private Integer teamId;

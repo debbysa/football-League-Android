@@ -83,7 +83,7 @@ public class StandingsFragment extends Fragment implements ListItemClickListener
                     DividerItemDecoration divider = new DividerItemDecoration(list.getContext(), layoutManager.getOrientation());
                     list.addItemDecoration(divider);
                 } else {
-                    Log.w(LOG_TAG, "RESPONSE IS NULL!");
+                    Log.w(LOG_TAG, "TIDAK ADA RESPONSE!");
                 }
             }
 

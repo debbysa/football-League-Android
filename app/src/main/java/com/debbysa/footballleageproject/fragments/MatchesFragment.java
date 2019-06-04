@@ -69,7 +69,7 @@ public class MatchesFragment extends Fragment implements ListItemClickListener {
                 final Matches res = response.body();
 
                 if (res != null) {
-                    Log.d(LOG_TAG, "Data received from " + response.body().toString());
+                    Log.d(LOG_TAG, "Data diterima dari " + response.body().toString());
 
                     matchList = new ArrayList<>(res.getMatchList());
                     Log.d(LOG_TAG, "matchList:" + matchList.size());
@@ -80,14 +80,14 @@ public class MatchesFragment extends Fragment implements ListItemClickListener {
                     DividerItemDecoration divider = new DividerItemDecoration(list.getContext(), layoutManager.getOrientation());
                     list.addItemDecoration(divider);
                 } else {
-                    Log.w(LOG_TAG, "RESPONSE IS NULL!");
+                    Log.w(LOG_TAG, "TIDAK ADA RESPONSE");
                 }
             }
 
             @Override
             public void onFailure(@NonNull Call<Matches> call, @NonNull Throwable t) {
                 try {
-                    Log.e(LOG_TAG, "QUERY FAILED: " + t.toString() + " >>> CAUSED BY: " + t.getCause());
+                    Log.e(LOG_TAG, "QUERY FAILED: " + t.toString() + " >>> KARENA: " + t.getCause());
                     throw t;
                 } catch (Throwable throwable) {
                     throwable.printStackTrace();
@@ -100,7 +100,7 @@ public class MatchesFragment extends Fragment implements ListItemClickListener {
 
     @Override
     public void onListItemClick(int clickedItemIndex, int clickedItemId, String clickedItemName) {
-        String msg = "Item #" + clickedItemIndex + " [" + clickedItemName + "] with id of " + clickedItemId + " clicked.";
+        String msg = "Match diklik!";
         Log.d(LOG_TAG, msg);
         Toast.makeText(this.getActivity(), msg, Toast.LENGTH_LONG).show();
     }

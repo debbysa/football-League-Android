@@ -1,4 +1,4 @@
-package com.debbysa.footballleageproject.model;
+package com.debbysa.footballleageproject.model.competitions;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class Competitions {
-    // for competitions list
+    // competitions list
     // https://api.football-data.org/v2/competitions
 
     @SerializedName("count")

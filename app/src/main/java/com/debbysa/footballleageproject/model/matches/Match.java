@@ -1,10 +1,14 @@
-package com.debbysa.footballleageproject.model;
+package com.debbysa.footballleageproject.model.matches;
 
+import com.debbysa.footballleageproject.model.AwayTeam;
+import com.debbysa.footballleageproject.model.HomeTeam;
+import com.debbysa.footballleageproject.model.Score;
+import com.debbysa.footballleageproject.model.competitions.Competition;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class Match {
-    // for competition/matches
+    // competition/matches
     // https://api.football-data.org/v2/competitions/{id}/matches
 
     @SerializedName("id")

@@ -1,4 +1,4 @@
-package com.debbysa.footballleageproject.model;
+package com.debbysa.footballleageproject.model.matches;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

@@ -134,3 +134,4 @@ public class MatchesAdapter extends RecyclerView.Adapter<MatchesAdapter.Fixtures
 
     }
 }
+

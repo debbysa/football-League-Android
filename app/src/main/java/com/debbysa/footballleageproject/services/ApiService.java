@@ -33,4 +33,7 @@ public interface ApiService {
     @GET("/v2/teams/{id}")
     Call<Team> getPlayers(@Path("id") int id);
 
+    @Headers(ServiceGenerator.BASE_KEY)
+    @GET("/v2/competitions/{id}/matches")
+    Call<Matches> getMatches(@Path("id") int id);
 }

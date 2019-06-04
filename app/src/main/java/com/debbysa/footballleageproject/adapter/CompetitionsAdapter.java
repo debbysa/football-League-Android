@@ -25,7 +25,7 @@ public class CompetitionsAdapter extends RecyclerView.Adapter<CompetitionsAdapte
         listener = clickListener;
 
         if (list == null || list.size() == 0) {
-            Log.d(LOG_TAG, "Where art thy data?");
+            Log.d(LOG_TAG, "Dimana Datamu?");
         }
     }
 

@@ -39,7 +39,7 @@ public class FixturesActivity extends Fragment implements ListItemClickListener 
     private List<Match> matchList;
     private List<Match> filteredMatchList;
     RecyclerView recyclerView;
-    EditText txt_search;
+//    EditText txt_search;
 
     public FixturesActivity() {
 

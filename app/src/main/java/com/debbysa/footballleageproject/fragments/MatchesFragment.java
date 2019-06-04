@@ -46,16 +46,16 @@ public class MatchesFragment extends Fragment implements ListItemClickListener {
         CompetitionActivity competitionActivity = (CompetitionActivity) getActivity();
         int competitionId = competitionActivity.getCompetitionId();
 
-        final RecyclerView list = view.findViewById(R.id.list_competition_matches);
+        RecyclerView list = view.findViewById(R.id.list_competition_matches);
 
-        final LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this.getActivity());
         list.setLayoutManager(layoutManager);
         list.setHasFixedSize(true);
         list.setItemAnimator(new DefaultItemAnimator());
 
         ApiService apiService = ApiClient.getClient().create(ApiService.class);
 
-        Call<Matches> call = apiService.getFixtures();
+        Call<Matches> call = apiService.getMatches(competitionId);
         call.enqueue(new Callback<Matches>() {
             @Override
             public void onResponse(@NonNull Call<Matches> call, @NonNull final Response<Matches> response) {
